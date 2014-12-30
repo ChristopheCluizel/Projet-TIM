@@ -1,0 +1,46 @@
+\documentclass{beamer} %[handout] pour supprimer la barre de navigation mais \pause ne fonctionne pas dans ce mode
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usetheme{Warsaw}
+
+\title[Détection-suivi de véhicule]{Détection et suivi de véhicule par caméra embarquée}
+\author{Brehmer Alexandre \and Cluizel Christophe}
+\institute{INSA Rouen}
+\date{\today}
+
+%ajoute la numérotation des pages et nombre pages total
+\addtobeamertemplate{footline}{\hfill\insertframenumber/\inserttotalframenumber\hspace{2em}\null}
+
+%indiquer le chemin du dossier des images
+\graphicspath{{}{image/}}
+
+\usepackage{array}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+\begin{document}
+  \begin{frame}[plain]
+  \titlepage
+  \end{frame}
+
+  \AtBeginSection[]
+  {
+    \begin{frame}
+    \frametitle{Sommaire}
+    \tableofcontents[currentsection, hideothersubsections]
+
+    \end{frame}
+  }
+
+  \input{introduction.tex}
+  \input{objectifs.tex}
+  \input{etat_de_lart.tex}
+  \input{solution_article.tex}
+  \input{resultats.tex}
+  \input{conclusion.tex}
+
+\end{document}
