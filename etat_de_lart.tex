@@ -1,5 +1,55 @@
 \section{État de l'art}
+
+% slide detection de vehicule
+\subsection{Détection du véhicule}
 \begin{frame}
 \frametitle{État de l'art}
+
+Détection du véhicule. Méthode ``naïve'':
+\begin{itemize}
+    \item recherche de caractéristiques bas-niveau (ombres, arêtes, symétries…)
+    \item peu fiable avec beaucoup de faux-positifs et sensible aux variations lumineuses
+    \item rapide et utilisée pour présélectionner des zones de recherche
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{État de l'art}
+
+Détection du véhicule. Méthode ``lourde'':
+\begin{itemize}
+    \item machine learning (SVM et NN) sur l'ensemble de l'image avec des descripteurs (orientation des arêtes, textures…)
+    \item lourd en calculs
+    \item utilisée après une présélection de zones
+\end{itemize}
+\end{frame}
+
+% slide detection de marquage au sol
+\subsection{Détection du marquage au sol}
+\begin{frame}
+\frametitle{État de l'art}
+
+Détection de marquage au sol:
+\begin{itemize}
+    \item technique la plus étudiée car indispensable au guidage latéral
+    \item nombreux problèmes de détection (ombres, variations de contraste, marquage effacé, obstruction par véhicule…)
+    \item détection de zones où des lignes peuvent être présentes (détection de Canny)
+    \item application d'un modèle mathématiques (ligne droite, quadratique…)
+    \item tracking pour accélérer le temps de calcul et la continuité
+\end{itemize}
+
+\end{frame}
+
+% slide combinaison des 2 methodes ci-dessus
+\subsection{Combinaison des 2 méthodes précédentes}
+\begin{frame}
+\frametitle{État de l'art}
+
+Combinaison des 2 techniques précédentes:
+\begin{itemize}
+    \item utiliser les 2 techniques séparément et combiner leurs résultats
+    \item utiliser le marquage pour assister le processus de détection de véhicule
+    \item utiliser les 2 techniques simultanément pour ``s'auto-optimiser''
+\end{itemize}
 
 \end{frame}
